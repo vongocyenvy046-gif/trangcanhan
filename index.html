@@ -36,6 +36,17 @@
       --border: rgba(244, 216, 111, 0.18);
       --shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
       color-scheme: dark;
+      background:
+        linear-gradient(
+          rgba(5, 10, 30, 0.85),
+          rgba(10, 15, 40, 0.92)
+        ),
+        linear-gradient(rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.22)),
+        url("image copy 3.png") center/cover no-repeat scroll;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
     }
 
     * {
@@ -49,14 +60,14 @@
     body {
       margin: 0;
       min-height: 100%;
-      background: url("image copy 3.png") center/cover no-repeat scroll;
       background-color: var(--bg);
+      background: url("image copy 3.png") center/cover no-repeat scroll;
+      background-attachment: scroll;
       position: relative;
       color: var(--text);
       font-size: 16px;
       line-height: 1.7;
       transition: background 0.5s ease, color 0.4s ease;
-      animation: bgBreathe 18s ease-in-out infinite;
     }
 
     body::before {
@@ -66,31 +77,15 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background:
-        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.04)),
-        radial-gradient(circle at top right, rgba(245, 197, 75, 0.12), transparent 28%),
-        linear-gradient(180deg, rgba(255, 249, 230, 0.4), rgba(255, 249, 230, 0.07));
+      background: radial-gradient(circle at top right, rgba(245, 197, 75, 0.12), transparent 28%),
+                  linear-gradient(180deg, rgba(255, 249, 230, 0.4), rgba(255, 249, 230, 0.07));
       pointer-events: none;
       z-index: -1;
       opacity: 0.95;
     }
 
     body::after {
-      content: '';
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 240px;
-      background-image: url('https://images.unsplash.com/photo-1625246333333-f89aff2b4e3f?w=1200&h=300&fit=crop&q=20');
-      background-repeat: repeat-x;
-      background-position: bottom;
-      background-size: auto 240px;
-      background-attachment: scroll;
-      pointer-events: none;
-      z-index: 1;
-      opacity: 0.75;
-      animation: bgFloat 24s ease-in-out infinite;
+      content: none;
     }
 
     @keyframes bgFloat {
@@ -98,18 +93,16 @@
       50% { transform: translateY(-6px); }
     }
 
-    body.dark-mode {
-      background:
-        linear-gradient(rgba(5, 10, 30, 0.78), rgba(10, 15, 40, 0.92)),
-        url("image copy 3.png") center/cover no-repeat scroll;
-      background-blend-mode: overlay;
-    }
-
     body.dark-mode::before {
+      content: "";
+      position: fixed;
+      inset: 0;
       background:
-        linear-gradient(rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.18)),
-        radial-gradient(circle at top right, rgba(244, 216, 111, 0.1), transparent 26%),
-        linear-gradient(180deg, rgba(10, 10, 14, 0.9), rgba(0, 0, 0, 0.95));
+        radial-gradient(circle at top, rgba(80, 120, 255, 0.15), transparent 60%),
+        radial-gradient(circle at bottom, rgba(120, 80, 255, 0.12), transparent 60%);
+      pointer-events: none;
+      z-index: -1;
+      opacity: 1;
     }
 
     img,
