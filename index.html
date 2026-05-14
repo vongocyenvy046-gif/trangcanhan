@@ -41,12 +41,11 @@
           rgba(5, 10, 30, 0.85),
           rgba(10, 15, 40, 0.92)
         ),
-        linear-gradient(rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.22)),
-        url("image copy 3.png") center/cover no-repeat scroll;
+        url("image copy 3.png");
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      background-attachment: scroll;
+      background-attachment: fixed;
     }
 
     * {
@@ -60,14 +59,13 @@
     body {
       margin: 0;
       min-height: 100%;
-      background-color: var(--bg);
-      background: url("image copy 3.png") center/cover no-repeat scroll;
-      background-attachment: scroll;
+      background: url("image copy 3.png") center/cover no-repeat fixed;
+      transition: 0.5s ease;
       position: relative;
       color: var(--text);
       font-size: 16px;
       line-height: 1.7;
-      transition: background 0.5s ease, color 0.4s ease;
+      animation: bgBreathe 18s ease-in-out infinite;
     }
 
     body::before {
@@ -85,7 +83,21 @@
     }
 
     body::after {
-      content: none;
+      content: '';
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 240px;
+      background-image: url('https://images.unsplash.com/photo-1625246333333-f89aff2b4e3f?w=1200&h=300&fit=crop&q=20');
+      background-repeat: repeat-x;
+      background-position: bottom;
+      background-size: auto 240px;
+      background-attachment: scroll;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.75;
+      animation: bgFloat 24s ease-in-out infinite;
     }
 
     @keyframes bgFloat {
@@ -97,12 +109,13 @@
       content: "";
       position: fixed;
       inset: 0;
+
       background:
         radial-gradient(circle at top, rgba(80, 120, 255, 0.15), transparent 60%),
         radial-gradient(circle at bottom, rgba(120, 80, 255, 0.12), transparent 60%);
+
       pointer-events: none;
       z-index: -1;
-      opacity: 1;
     }
 
     img,
