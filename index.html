@@ -560,6 +560,24 @@
       font-size: 1rem;
     }
 
+    .about-card {
+      margin: 0 auto;
+      padding: 34px 32px;
+      max-width: 760px;
+      border-radius: 32px;
+      background: rgba(255, 250, 236, 0.95);
+      border: 1px solid rgba(245, 197, 75, 0.24);
+      box-shadow: 0 28px 70px rgba(245, 197, 75, 0.1);
+      text-align: center;
+      backdrop-filter: blur(12px);
+    }
+
+    body.dark-mode .about-card {
+      background: rgba(15, 22, 38, 0.92);
+      border-color: rgba(244, 216, 111, 0.14);
+      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.18);
+    }
+
     .grid-2 {
       display: grid;
       gap: 28px;
@@ -1174,10 +1192,11 @@
 
     <section class="section" id="about">
       <div class="section-title">About</div>
-      <h2 class="section-heading"></h2>
-      <p class="section-text">Xin chào, tôi là <strong>Võ Ngọc Yến Vy</strong> — sinh viên ngành <strong>Đồ họa Kỹ thuật số</strong> thuộc khoa Công Nghệ Thông Tin tại Đại học Gia Định. Tôi yêu thích lĩnh vực thiết kế sáng tạo và luôn tìm kiếm cơ hội để phát triển tư duy thẩm mỹ cũng như kỹ năng thiết kế của bản thân thông qua quá trình học tập và thực hành.</p>
-      <p class="section-text">Trong quá trình học, tôi đã có cơ hội tiếp cận và thực hiện nhiều dự án liên quan đến website bán hàng, website trường học và hệ thống LMS. Những trải nghiệm đó giúp tôi hiểu hơn về cách xây dựng giao diện trực quan, hiện đại và mang lại trải nghiệm tốt cho người dùng.</p>
-      <p class="section-text">Hiện tại, tôi vẫn đang không ngừng học hỏi, nâng cao kỹ năng thiết kế đồ họa, bố cục giao diện, màu sắc và khả năng sáng tạo để hoàn thiện bản thân hơn mỗi ngày. Tôi luôn mong muốn tạo ra những sản phẩm có tính thẩm mỹ cao, chuyên nghiệp và phù hợp với xu hướng thiết kế hiện đại.</p>
+      <div class="about-card">
+        <p class="section-text">Xin chào, tôi là <strong>Võ Ngọc Yến Vy</strong> — sinh viên ngành <strong>Đồ họa Kỹ thuật số</strong> thuộc khoa Công Nghệ Thông Tin tại Đại học Gia Định. Tôi yêu thích lĩnh vực thiết kế sáng tạo và luôn tìm kiếm cơ hội để phát triển tư duy thẩm mỹ cũng như kỹ năng thiết kế của bản thân thông qua quá trình học tập và thực hành.</p>
+        <p class="section-text">Trong quá trình học, tôi đã có cơ hội tiếp cận và thực hiện nhiều dự án liên quan đến website bán hàng, website trường học và hệ thống LMS. Những trải nghiệm đó giúp tôi hiểu hơn về cách xây dựng giao diện trực quan, hiện đại và mang lại trải nghiệm tốt cho người dùng.</p>
+        <p class="section-text">Hiện tại, tôi vẫn đang không ngừng học hỏi, nâng cao kỹ năng thiết kế đồ họa, bố cục giao diện, màu sắc và khả năng sáng tạo để hoàn thiện bản thân hơn mỗi ngày. Tôi luôn mong muốn tạo ra những sản phẩm có tính thẩm mỹ cao, chuyên nghiệp và phù hợp với xu hướng thiết kế hiện đại.</p>
+      </div>
     </section>
 
     <section class="section" id="skills">
